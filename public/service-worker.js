@@ -13,17 +13,14 @@ const CACHE_NAME = "static-cache-v2";
 const DATA_CACHE_NAME = "data-cache-v1";
 
 self.addEventListener("install", function (evt) {
-  // pre cache transaction data
+ // pre cache all static assets
   evt.waitUntil(
-    caches.open(DATA_CACHE_NAME).then((cache) => cache.add("/api/transaction"))
-  );
+    caches.open(CACHE_NAME).then(cache => {
+      return cache.addAll(FILES_TO_CACHE);
+    })
 
-  // pre cache all static assets
-  evt.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(FILES_TO_CACHE))
-  );
   // console.log("Up and running!");
-
+  );
   // tell the browser to activate this service worker immediately once it
   // has finished installing
   self.skipWaiting();
