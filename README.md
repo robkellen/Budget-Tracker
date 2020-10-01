@@ -67,8 +67,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## Contributing
 To contribute to this project please email me at rob.h.kellen@gmail.com
 
-## Tests
-
   
 ## Questions
 Please email me at rob.h.kellen@gmail.com with any questions about this project.  You can also see more of my work by visiting my GitHub profile at [robkellen](https://github.com{userName}).
